@@ -33,7 +33,6 @@
         <ul class="navbar-nav">
           <li class="nav-item"><a class="nav-link" href="#sobre">Sobre</a></li>
           <li class="nav-item"><a class="nav-link" href="#github-projetos">Projetos</a></li>
-          <li class="nav-item"><a class="nav-link" href="#habilidades">Habilidades</a></li>
            <li class="nav-item"><a class="nav-link" href="#curriculo">Currículo</a></li>
         </ul>
       </div>
@@ -43,76 +42,235 @@
   <!-- Compensação para navbar fixa -->
   <div style="height: 80px;"></div>
 
-  <!-- Seção de Introdução -->
-  <section class="textomeio d-flex align-items-center justify-content-center text-center" style="min-height:100vh;">
-  <div class="container">
-    
-    <!-- Imagem -->
-    <img src="img/imagemrosto.jpg" 
-         alt="Foto de Ryan" 
-         class="img-fluid rounded-circle mb-4"
-         style="max-width: 220px;">
+  <section class="hero-section">
 
-    <!-- Nome -->
-    <h1 class="meunome fs-1">
-      Ryan Cimardi Iuchi
-    </h1>
+    <div class="container">
 
-    <!-- Profissão -->
-    <p class="lead fs-4" id="profissao"></p>
+        <div class="hero-content">
 
-    <!-- Botões -->
-    <div class="mt-4">
-      <a href="#sobre" class="btn border-dark rounded-pill px-4 me-2">Sobre</a>
-      <a href="#contato" class="btn border-dark rounded-pill px-4">Contato</a>
+
+            <!-- LADO ESQUERDO -->
+
+            <div class="hero-text">
+
+                <h1 class="meunome">
+                    Ryan Cimardi Iuchi
+                </h1>
+
+                <p class="lead fs-4" id="profissao"></p>
+
+
+                <div class="hero-buttons">
+
+                    <a
+                        href="#sobre"
+                        class="btn border-dark rounded-pill px-4 me-2"
+                    >
+                        Sobre
+                    </a>
+
+                    <a
+                        href="#contato"
+                        class="btn border-dark rounded-pill px-4"
+                    >
+                        Contato
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- LADO DIREITO -->
+
+            <div class="hero-skills">
+
+                <div class="hero-orbit">
+                   
+
+                    <!-- HTML -->
+
+                    <div class="hero-skill hero-html">
+                      <a class="navbar-brand" href="#"><img class="logo-img" src="img/html-removebg-preview (1).png" alt="Logo HTML" /></a>
+                       
+
+                        <div class="hero-tooltip">
+
+                            <strong>HTML</strong>
+
+                            <p>
+                                Estruturação de páginas
+                                e aplicações web.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- CSS -->
+
+                    <div class="hero-skill hero-css">
+
+                       <a class="navbar-brand" href="#"><img class="logo-img" src="img/css3.png" alt="Logo CSS" /></a>
+
+                        <div class="hero-tooltip">
+
+                            <strong>CSS</strong>
+
+                            <p>
+                                Interfaces, responsividade
+                                e animações.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- JAVASCRIPT -->
+
+                    <div class="hero-skill hero-js">
+
+                        <a class="navbar-brand" href="#"><img class="logo-img" src="img/javascript-removebg-preview.png" alt="Logo javaScript" /></a>
+
+                        <div class="hero-tooltip">
+
+                            <strong>JavaScript</strong>
+
+                            <p>
+                                Interações e funcionalidades
+                                dinâmicas.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- JAVA -->
+
+                    <div class="hero-skill hero-java">
+
+                         <a class="navbar-brand" href="#"><img class="logo-img" src="img/java-removebg-preview.png" alt="Logo java" /></a>
+
+                        <div class="hero-tooltip">
+
+                            <strong>Java</strong>
+
+                            <p>
+                                Desenvolvimento back-end
+                                e orientação a objetos.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- MYSQL -->
+
+                    <div class="hero-skill hero-mysql">
+
+                        <a class="navbar-brand" href="#"><img class="logo-img" src="img/bancodedados-removebg-preview.png" alt="Logo Banco de Dados" /></a>
+
+                        <div class="hero-tooltip">
+
+                            <strong>MySQL</strong>
+
+                            <p>
+                                Banco de dados relacionais
+                                e SQL.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- GIT -->
+
+                    <div class="hero-skill hero-git">
+
+                       <a class="navbar-brand " href="#"><img class="logo-img"  src="img/git2-removebg-preview.png" alt="Logo GITHUB" /></a>
+
+                        <div class="hero-tooltip">
+
+                            <strong>Git</strong>
+
+                            <p>
+                                Controle de versão
+                                dos projetos.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </div>
+
     </div>
 
-  </div>
 </section>
 
-  <!-- Sobre -->
-  <section id="sobre" class="py-5">
-    <div class="container">
-      <h2 class="text-center mb-4"><i>Sobre Mim</i></h2>
-      <p class="text-center mx-auto" style="max-width: 800px;">
-        Olá! Meu nome é Ryan e sou apaixonado por tecnologia, inovação e tudo que envolve o desenvolvimento de sistemas...
-        <br />
-        <a href="#github-projetos"class="btn bg-primary text-white rounded-pill  mt-3">Projetos</a>
-        <a href="#contato" class="btn bg-primary text-white rounded-pill mt-3">Contato</a>
-      </p>
-    </div>
-  </section>
 
-  
+<section id="sobre" class="sobre-section">
+  <div class="container">
+    <h2 class="text-center mb-5">Sobre Mim</h2>
+    <div class="sobre-container">
+      <div class="abajur" id="abajur">
+          <div class="fio" title="Puxe o fio">
+             <img src="img/floor-lamp.png">
+          </div>
+        </div>
+      <!-- TEXTO (começa apagado) -->
+      <div class="sobre-texto light-content">
+        <span class="sobre-tag">👨‍💻 Desenvolvedor</span>
+        <h3>Olá, eu sou o <strong>Ryan</strong>!</h3>
+        <p>
+          Sou apaixonado por tecnologia, programação
+          e desenvolvimento de sistemas.
+        </p>
+        <p>
+          Atualmente estudo Ciência da Computação
+          e estou sempre buscando aprender novas
+          tecnologias e melhorar minhas habilidades.
+        </p>
+        <p>
+          Meu foco é principalmente no desenvolvimento
+          <strong>Back-end</strong>, mas também gosto
+          de desenvolver projetos Web.
+        </p>
+        <div class="sobre-tecnologias">
+          <span>☕ Java</span>
+          <span>🌐 Web</span>
+          <span>🗄️ MySQL</span>
+          <span>⚡ JavaScript</span>
+        </div>
+      </div>
+      <!-- ABAJUR + FOTO -->
+      <div class="sobre-foto-area">
+        <div class="foto-wrapper light-content">
+          <img
+            src="img/imagemrosto.jpg"
+            alt="Ryan Cimardi Iuchi"
+          >
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
   <!-- Projetos -->
 
   <div id="github-projetos" class="row g-4"> <h1  class="text-center">Projetos</h1></div>
 
-  <!-- Habilidades -->
-  <section id="habilidades" class="py-5">
-    <div class="container">
-      <h2 class="text-center mb-4">Minhas Habilidades</h2>
-      <div class="row justify-content-center text-center">
-        <div class="col-md-5 mb-4">
-          <h4>Conhecimentos Técnicos</h4>
-          <p><strong>Web:</strong> HTML, CSS, JavaScript, Bootstrap</p>
-          <p><strong>Back-end:</strong> Java, Node.js</p>
-          <p><strong>Banco de Dados:</strong> MySQL</p>
-          <p><strong>Ferramentas:</strong> Git, GitHub, VS Code, NetBeans</p>
-        </div>
-        <div class="col-md-5 mb-4">
-          <h4>Qualidades Pessoais</h4>
-          <p><strong>Liderança:</strong> iniciativa e tomada de decisões</p>
-          <p><strong>Responsabilidade:</strong> comprometido com prazos</p>
-          <p><strong>Trabalho em equipe:</strong> colaborativo</p>
-          <p><strong>Comunicação:</strong> clara e objetiva</p>
-          <p><strong>Aprendizado contínuo:</strong> sempre evoluindo</p>
-        </div>
-      </div>
-    </div>
-  </section>
-  
   <!-- Currículo -->
    <section id="curriculo" class="section bg-light">
         <div class="container">
@@ -253,6 +411,19 @@ fetch("https://api.github.com/users/ryancimardiiuchi/repos")
     });
 
   });
+  const secaoSobre = document.getElementById('sobre');
+const fio = document.querySelector('#abajur .fio');
+
+if (secaoSobre && fio) {
+  fio.addEventListener('click', () => {
+    fio.classList.add('puxando');
+    setTimeout(() => fio.classList.remove('puxando'), 200);
+
+    // liga / desliga a luz
+    secaoSobre.classList.toggle('luz-acesa');
+  });
+}
+
 
   </script>
 </body>

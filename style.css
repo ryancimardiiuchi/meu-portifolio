@@ -98,4 +98,920 @@ section {
   transform: translateY(-8px) scale(1.02);
   box-shadow: 0 15px 25px rgba(0,0,0,0.15);
 }
+/* =========================================
+   PRIMEIRA TELA
+========================================= */
 
+.hero-section {
+
+    min-height: calc(100vh - 80px);
+
+    display: flex;
+
+    align-items: center;
+
+    padding: 80px 0;
+
+}
+
+
+.hero-content {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 80px;
+
+}
+
+
+/* =========================================
+   TEXTO
+========================================= */
+
+.hero-text {
+
+    flex: 1;
+
+    text-align: left;
+
+}
+
+
+.hero-photo {
+
+    width: 190px;
+
+    height: 190px;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+
+    margin-bottom: 25px;
+
+}
+
+
+.hero-text h1 {
+
+    font-size: clamp(40px, 5vw, 65px);
+
+}
+
+
+.hero-buttons {
+
+    margin-top: 30px;
+
+}
+
+
+/* =========================================
+   ÓRBITA
+========================================= */
+
+.hero-skills {
+
+    width: 520px;
+
+    height: 520px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+}
+
+
+.hero-orbit {
+
+    width: 430px;
+
+    height: 430px;
+
+    position: relative;
+
+    border-radius: 50%;
+
+    border: 1px dashed rgba(13, 110, 253, .3);
+
+    animation: heroRotate 25s linear infinite;
+
+}
+
+
+/* =========================================
+   CÍRCULOS
+========================================= */
+
+.hero-skill {
+
+    position: absolute;
+
+    width: 80px;
+
+    height: 80px;
+
+    border-radius: 50%;
+
+    background: white;
+
+    border: 2px solid #0d6efd;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    cursor: pointer;
+
+    animation: heroCounterRotate 25s linear infinite;
+
+    transition: .3s;
+
+}
+
+
+.hero-skill > span {
+
+    font-size: 35px;
+
+}
+
+
+.hero-skill:hover {
+
+    transform: scale(1.15);
+
+    box-shadow:
+        0 0 30px rgba(13, 110, 253, .4);
+
+}
+
+
+/* =========================================
+   POSIÇÕES
+========================================= */
+
+.hero-html {
+
+    top: -40px;
+
+    left: 175px;
+
+}
+
+
+.hero-css {
+
+    top: 60px;
+
+    right: -40px;
+
+}
+
+
+.hero-js {
+
+    bottom: 60px;
+
+    right: -40px;
+
+}
+
+
+.hero-java {
+
+    bottom: -40px;
+
+    left: 175px;
+
+}
+
+
+.hero-mysql {
+
+    bottom: 60px;
+
+    left: -40px;
+
+}
+
+
+.hero-git {
+
+    top: 60px;
+
+    left: -40px;
+
+}
+
+
+/* =========================================
+   DESCRIÇÃO
+========================================= */
+
+.hero-tooltip {
+
+    position: absolute;
+
+    width: 210px;
+
+    padding: 15px;
+
+    background: rgba(255,255,255,.96);
+
+    border-radius: 14px;
+
+    box-shadow:
+        0 10px 30px rgba(0,0,0,.15);
+
+    left: 50%;
+
+    bottom: -125px;
+
+    transform:
+        translateX(-50%)
+        translateY(10px);
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transition: .3s;
+
+    z-index: 50;
+
+}
+
+
+.hero-tooltip strong {
+
+    color: #0d6efd;
+
+    font-size: 17px;
+
+}
+
+
+.hero-tooltip p {
+
+    color: #555;
+
+    font-size: 12px;
+
+    margin: 5px 0 0;
+
+    line-height: 1.5;
+
+}
+
+
+.hero-skill:hover .hero-tooltip {
+
+    opacity: 1;
+
+    visibility: visible;
+
+    transform:
+        translateX(-50%)
+        translateY(0);
+
+}
+
+
+/* =========================================
+   ANIMAÇÃO
+========================================= */
+
+@keyframes heroRotate {
+
+    from {
+
+        transform: rotate(0deg);
+
+    }
+
+    to {
+
+        transform: rotate(360deg);
+
+    }
+
+}
+
+
+@keyframes heroCounterRotate {
+
+    from {
+
+        transform: rotate(0deg);
+
+    }
+
+    to {
+
+        transform: rotate(-360deg);
+
+    }
+
+}
+
+
+/* =========================================
+   DARK MODE
+========================================= */
+
+body.dark .hero-skill {
+
+    background: #161b22;
+
+    border-color: #30363d;
+
+}
+
+
+body.dark .hero-tooltip {
+
+    background: rgba(22,27,34,.97);
+
+}
+
+
+body.dark .hero-tooltip p {
+
+    color: #ccc;
+
+}
+
+
+/* =========================================
+   CELULAR
+========================================= */
+
+@media (max-width: 900px) {
+
+    .hero-section {
+
+        padding: 20pxx 0;
+
+    }
+
+
+    .hero-content {
+
+        flex-direction: column;
+
+        text-align: center;
+
+        gap: 60px;
+
+    }
+
+
+    .hero-text {
+
+        text-align: center;
+
+    }
+
+
+    .hero-skills {
+
+        width: 320px;
+
+        height: 320px;
+
+    }
+
+
+    .hero-orbit {
+
+        width: 300px;
+
+        height: 300px;
+
+    }
+
+
+    .hero-skill {
+
+        width: 65px;
+
+        height: 65px;
+
+    }
+
+
+    .hero-skill > span {
+
+        font-size: 28px;
+
+    }
+
+
+    .hero-html {
+
+        top: -33px;
+
+        left: 127px;
+
+    }
+
+
+    .hero-css {
+
+        top: 45px;
+
+        right: -33px;
+
+    }
+
+
+    .hero-js {
+
+        bottom: 45px;
+
+        right: -33px;
+
+    }
+
+
+    .hero-java {
+
+        bottom: -33px;
+
+        left: 127px;
+
+    }
+
+
+    .hero-mysql {
+
+        bottom: 45px;
+
+        left: -33px;
+
+    }
+
+
+    .hero-git {
+
+        top: 45px;
+
+        left: -33px;
+
+    }
+
+}
+/* =========================================
+   CELULAR
+========================================= */
+
+@media (max-width: 900px) {
+
+    .hero-section {
+
+        padding: 20pxx 0;
+
+    }
+
+
+    .hero-content {
+
+        flex-direction: column;
+
+        text-align: center;
+
+        gap: 60px;
+
+    }
+
+
+    .hero-text {
+
+        text-align: center;
+
+    }
+
+
+    .hero-skills {
+
+        width: 320px;
+
+        height: 320px;
+
+    }
+
+
+    .hero-orbit {
+
+        width: 300px;
+
+        height: 300px;
+
+    }
+
+
+    .hero-skill {
+
+        width: 65px;
+
+        height: 65px;
+
+    }
+
+
+    .hero-skill > span {
+
+        font-size: 28px;
+
+    }
+
+
+    .hero-html {
+
+        top: -33px;
+
+        left: 127px;
+
+    }
+
+
+    .hero-css {
+
+        top: 45px;
+
+        right: -33px;
+
+    }
+
+
+    .hero-js {
+
+        bottom: 45px;
+
+        right: -33px;
+
+    }
+
+
+    .hero-java {
+
+        bottom: -33px;
+
+        left: 127px;
+
+    }
+
+
+    .hero-mysql {
+
+        bottom: 45px;
+
+        left: -33px;
+
+    }
+
+
+    .hero-git {
+
+        top: 45px;
+
+        left: -33px;
+
+    }
+
+}
+
+
+
+
+/* =========================================
+   CONTAINER
+========================================= */
+
+.sobre-container {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 100px;
+
+}
+#abajur{
+      width: 300px;
+      height: 350px;
+}
+
+
+/* =========================================
+   ÁREA DA FOTO
+========================================= */
+
+.sobre-foto-area {
+
+    position: relative;
+
+    width: 350px;
+
+    display: flex;
+
+    justify-content: center;
+
+    flex-shrink: 0;
+
+}
+
+
+/* =========================================
+   FOTO
+========================================= */
+
+.foto-wrapper {
+
+    position: relative;
+
+    width: 280px;
+
+    height: 280px;
+
+    border-radius: 50%;
+
+    overflow: hidden;
+
+    border: 5px solid #0d6efd;
+
+    box-shadow:
+        0 10px 40px rgba(13, 110, 253, .25);
+
+    cursor: pointer;
+
+    transition: .5s;
+
+}
+
+
+/* imagem */
+
+.foto-wrapper img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: .6s;
+
+}
+
+
+/* =========================================
+   HOVER DA FOTO
+========================================= */
+
+.foto-wrapper:hover {
+
+    transform: scale(1.05);
+
+    box-shadow:
+        0 0 50px rgba(13, 110, 253, .5);
+
+}
+
+
+.foto-wrapper:hover img {
+
+    transform: scale(1.12);
+
+}
+
+
+/* =========================================
+   OVERLAY
+========================================= */
+
+.foto-overlay {
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        rgba(13, 110, 253, .75);
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    color: white;
+
+    opacity: 0;
+
+    transition: .4s;
+
+}
+
+
+.foto-overlay span {
+
+    font-size: 35px;
+
+}
+
+
+.foto-overlay p {
+
+    margin-top: 5px;
+
+}
+
+
+.foto-wrapper:hover .foto-overlay {
+
+    opacity: 1;
+
+}
+
+/* =========================================
+   TEXTO
+========================================= */
+
+.sobre-texto {
+    margin-top: 80px;
+    max-width: 1000px;
+
+    opacity: .4;
+
+    transform: translateX(30px);
+
+    transition: .5s;
+
+}
+
+
+/* aparece quando passa na foto */
+
+.sobre-foto-area:hover + .sobre-texto {
+
+    opacity: 1;
+
+    transform: translateX(0);
+
+}
+
+
+.sobre-tag {
+
+    display: inline-block;
+
+    padding: 7px 15px;
+
+    border-radius: 20px;
+
+    background: rgba(13, 110, 253, .1);
+
+    color: #0d6efd;
+
+    font-size: 14px;
+
+    margin-bottom: 15px;
+
+}
+
+
+.sobre-texto h3 {
+
+    font-size: 32px;
+
+    margin-bottom: 20px;
+
+}
+
+
+.sobre-texto p {
+
+    color: #666;
+
+    line-height: 1.7;
+
+    margin-bottom: 12px;
+
+}
+
+
+.sobre-texto strong {
+
+    color: #0d6efd;
+
+}
+
+
+/* =========================================
+   TECNOLOGIAS
+========================================= */
+
+.sobre-tecnologias {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 10px;
+
+    margin-top: 25px;
+
+}
+
+
+.sobre-tecnologias span {
+
+    padding: 8px 14px;
+
+    background: #f1f3f5;
+
+    border-radius: 20px;
+
+    font-size: 13px;
+
+    transition: .3s;
+
+}
+
+
+.sobre-tecnologias span:hover {
+
+    background: #0d6efd;
+
+    color: white;
+
+    transform: translateY(-3px);
+
+}
+
+
+/* =========================================
+   DARK MODE
+========================================= */
+
+body.dark .sobre-texto p {
+
+    color: #bbb;
+
+}
+
+
+body.dark .sobre-tecnologias span {
+
+    background: #161b22;
+
+    color: #ddd;
+
+}
+
+
+body.dark .sobre-tag {
+
+    background: rgba(77, 171, 255, .1);
+
+    color: #4dabff;
+
+}
+
+
+/* Conteúdo apagado no início */
+.light-content {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(12px);
+  transition:
+    opacity 0.5s ease,
+    visibility 0.5s ease,
+    transform 0.5s ease,
+    filter 0.5s ease;
+  filter: brightness(0.3);
+}
+/* Quando a luz acende */
+.sobre-section.luz-acesa .light-content {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  filter: brightness(1);
+}
