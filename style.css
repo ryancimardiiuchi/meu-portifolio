@@ -1,106 +1,181 @@
-#profissao::after {
-  content: "|";
-  animation: piscar 1s infinite;
+* {
+    box-sizing: border-box;
 }
 
-@keyframes piscar {
-  0% {opacity: 1;}
-  50% {opacity: 0;}
-  100% {opacity: 1;}
+html {
+    scroll-behavior: smooth;
 }
-.meunome{
-  background: linear-gradient(
-    90deg,
-    #0d6efd 0%,
-    #4dabff 50%,
-    #0536e4 100%
-  );
-  background-size: 200%;
-  
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
 
-  animation: brilhoNome 3s linear infinite;
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+    color: #212529;
+
+    transition:
+        background-color 0.4s ease,
+        color 0.4s ease;
+
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+section {
+    padding: 100px 0;
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+}
+
+footer {
+    padding: 50px 0;
+    text-align: center;
+}
+
+
+/* =========================================================
+   NOME
+========================================================= */
+
+.meunome {
+    background: linear-gradient(
+        90deg,
+        #0d6efd 0%,
+        #4dabff 50%,
+        #0536e4 100%
+    );
+
+    background-size: 200%;
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    animation: brilhoNome 3s linear infinite;
 }
 
 @keyframes brilhoNome {
-  0% {
-    background-position: 0%;
-  }
-  100% {
-    background-position: 200%;
-  }
-}
 
-#partedecima{
- font-family: Arial;
-}
-.textomeio{
-  padding: 200px 0;
-  text-align: center
-}
-
-section {
-  padding: 100px 0;
-}
-.logo-img {
-      width: 80px;
-      height: 80px;
-      
+    0% {
+        background-position: 0%;
     }
-footer {
-  padding: 50px 0;
-  text-align: center;
-}
-section {
-  min-height: 70vh;
-  display: flex;
-  align-items: center;
+
+    100% {
+        background-position: 200%;
+    }
+
 }
 
 
+/* =========================================================
+   PROFISSÃO
+========================================================= */
+
+#profissao::after {
+    content: "|";
+    animation: piscar 1s infinite;
+}
+
+@keyframes piscar {
+
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+
+}
+
+
+/* =========================================================
+   ELEMENTOS GERAIS
+========================================================= */
+
+#partedecima {
+    font-family: Arial, sans-serif;
+}
+
+.textomeio {
+    padding: 200px 0;
+    text-align: center;
+}
+
+.logo-img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+}
 
 .hidden {
-  opacity: 0;
-  transform: translateY(50px);
-  transition: all 0.6s ease-in-out;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.6s ease-in-out;
 }
 
- /*<!-- Scroll suave -->*/ 
-    html {
-      scroll-behavior: smooth;
-    }
- 
-
-    .btn:hover {
-      background-color: #0d6efd;
-      color: white;
-    }
-
-    /* Voltar ao topo */
-    #btn-topo {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      z-index: 999;
-      display: none;
-    }
 .show {
-  opacity: 1;
-  transform: translateY(0);
+    opacity: 1;
+    transform: translateY(0);
 }
 
- .card{
-  transition: all 0.3s ease;
+
+/* =========================================================
+   BOTÕES
+========================================================= */
+
+.btn {
+    transition: all 0.3s ease;
 }
 
-.card:hover{
-  transform: translateY(-8px) scale(1.02);
-  box-shadow: 0 15px 25px rgba(0,0,0,0.15);
+.btn:hover {
+    background-color: #0d6efd;
+    color: white;
 }
-/* =========================================
-   PRIMEIRA TELA
-========================================= */
+
+
+/* =========================================================
+   CARDS
+========================================================= */
+
+.card {
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-8px) scale(1.02);
+
+    box-shadow:
+        0 15px 25px rgba(0, 0, 0, 0.15);
+}
+
+
+/* =========================================================
+   BOTÃO VOLTAR AO TOPO
+========================================================= */
+
+#btn-topo {
+    position: fixed;
+
+    bottom: 20px;
+    right: 20px;
+
+    z-index: 999;
+
+    display: none;
+}
+
+
+/* =========================================================
+   PRIMEIRA TELA / HERO
+========================================================= */
 
 .hero-section {
 
@@ -128,15 +203,28 @@ section {
 }
 
 
-/* =========================================
-   TEXTO
-========================================= */
+/* =========================================================
+   TEXTO HERO
+========================================================= */
 
 .hero-text {
 
     flex: 1;
 
+    min-width: 0;
+
     text-align: left;
+
+}
+
+
+.hero-text h1 {
+
+    font-size: clamp(40px, 5vw, 65px);
+
+    line-height: 1.1;
+
+    word-wrap: break-word;
 
 }
 
@@ -156,23 +244,22 @@ section {
 }
 
 
-.hero-text h1 {
-
-    font-size: clamp(40px, 5vw, 65px);
-
-}
-
-
 .hero-buttons {
 
     margin-top: 30px;
 
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 10px;
+
 }
 
 
-/* =========================================
-   ÓRBITA
-========================================= */
+/* =========================================================
+   ÓRBITA DAS TECNOLOGIAS
+========================================================= */
 
 .hero-skills {
 
@@ -201,16 +288,17 @@ section {
 
     border-radius: 50%;
 
-    border: 1px dashed rgba(13, 110, 253, .3);
+    border: 1px dashed rgba(13, 110, 253, 0.3);
 
-    animation: heroRotate 25s linear infinite;
+    animation:
+        heroRotate 25s linear infinite;
 
 }
 
 
-/* =========================================
-   CÍRCULOS
-========================================= */
+/* =========================================================
+   CÍRCULOS DAS TECNOLOGIAS
+========================================================= */
 
 .hero-skill {
 
@@ -234,9 +322,10 @@ section {
 
     cursor: pointer;
 
-    animation: heroCounterRotate 25s linear infinite;
+    animation:
+        heroCounterRotate 25s linear infinite;
 
-    transition: .3s;
+    transition: 0.3s;
 
 }
 
@@ -248,19 +337,30 @@ section {
 }
 
 
+.hero-skill .logo-img {
+
+    width: 55px;
+
+    height: 55px;
+
+    object-fit: contain;
+
+}
+
+
 .hero-skill:hover {
 
     transform: scale(1.15);
 
     box-shadow:
-        0 0 30px rgba(13, 110, 253, .4);
+        0 0 30px rgba(13, 110, 253, 0.4);
 
 }
 
 
-/* =========================================
-   POSIÇÕES
-========================================= */
+/* =========================================================
+   POSIÇÕES DAS TECNOLOGIAS
+========================================================= */
 
 .hero-html {
 
@@ -316,9 +416,9 @@ section {
 }
 
 
-/* =========================================
-   DESCRIÇÃO
-========================================= */
+/* =========================================================
+   TOOLTIP
+========================================================= */
 
 .hero-tooltip {
 
@@ -328,12 +428,12 @@ section {
 
     padding: 15px;
 
-    background: rgba(255,255,255,.96);
+    background: rgba(255, 255, 255, 0.96);
 
     border-radius: 14px;
 
     box-shadow:
-        0 10px 30px rgba(0,0,0,.15);
+        0 10px 30px rgba(0, 0, 0, 0.15);
 
     left: 50%;
 
@@ -347,7 +447,7 @@ section {
 
     visibility: hidden;
 
-    transition: .3s;
+    transition: 0.3s;
 
     z-index: 50;
 
@@ -389,22 +489,18 @@ section {
 }
 
 
-/* =========================================
-   ANIMAÇÃO
-========================================= */
+/* =========================================================
+   ANIMAÇÕES
+========================================================= */
 
 @keyframes heroRotate {
 
     from {
-
         transform: rotate(0deg);
-
     }
 
     to {
-
         transform: rotate(360deg);
-
     }
 
 }
@@ -413,292 +509,19 @@ section {
 @keyframes heroCounterRotate {
 
     from {
-
         transform: rotate(0deg);
-
     }
 
     to {
-
         transform: rotate(-360deg);
-
     }
 
 }
 
 
-/* =========================================
-   DARK MODE
-========================================= */
-
-body.dark .hero-skill {
-
-    background: #161b22;
-
-    border-color: #30363d;
-
-}
-
-
-body.dark .hero-tooltip {
-
-    background: rgba(22,27,34,.97);
-
-}
-
-
-body.dark .hero-tooltip p {
-
-    color: #ccc;
-
-}
-
-
-/* =========================================
-   CELULAR
-========================================= */
-
-@media (max-width: 900px) {
-
-    .hero-section {
-
-        padding: 20pxx 0;
-
-    }
-
-
-    .hero-content {
-
-        flex-direction: column;
-
-        text-align: center;
-
-        gap: 60px;
-
-    }
-
-
-    .hero-text {
-
-        text-align: center;
-
-    }
-
-
-    .hero-skills {
-
-        width: 320px;
-
-        height: 320px;
-
-    }
-
-
-    .hero-orbit {
-
-        width: 300px;
-
-        height: 300px;
-
-    }
-
-
-    .hero-skill {
-
-        width: 65px;
-
-        height: 65px;
-
-    }
-
-
-    .hero-skill > span {
-
-        font-size: 28px;
-
-    }
-
-
-    .hero-html {
-
-        top: -33px;
-
-        left: 127px;
-
-    }
-
-
-    .hero-css {
-
-        top: 45px;
-
-        right: -33px;
-
-    }
-
-
-    .hero-js {
-
-        bottom: 45px;
-
-        right: -33px;
-
-    }
-
-
-    .hero-java {
-
-        bottom: -33px;
-
-        left: 127px;
-
-    }
-
-
-    .hero-mysql {
-
-        bottom: 45px;
-
-        left: -33px;
-
-    }
-
-
-    .hero-git {
-
-        top: 45px;
-
-        left: -33px;
-
-    }
-
-}
-/* =========================================
-   CELULAR
-========================================= */
-
-@media (max-width: 900px) {
-
-    .hero-section {
-
-        padding: 20pxx 0;
-
-    }
-
-
-    .hero-content {
-
-        flex-direction: column;
-
-        text-align: center;
-
-        gap: 60px;
-
-    }
-
-
-    .hero-text {
-
-        text-align: center;
-
-    }
-
-
-    .hero-skills {
-
-        width: 320px;
-
-        height: 320px;
-
-    }
-
-
-    .hero-orbit {
-
-        width: 300px;
-
-        height: 300px;
-
-    }
-
-
-    .hero-skill {
-
-        width: 65px;
-
-        height: 65px;
-
-    }
-
-
-    .hero-skill > span {
-
-        font-size: 28px;
-
-    }
-
-
-    .hero-html {
-
-        top: -33px;
-
-        left: 127px;
-
-    }
-
-
-    .hero-css {
-
-        top: 45px;
-
-        right: -33px;
-
-    }
-
-
-    .hero-js {
-
-        bottom: 45px;
-
-        right: -33px;
-
-    }
-
-
-    .hero-java {
-
-        bottom: -33px;
-
-        left: 127px;
-
-    }
-
-
-    .hero-mysql {
-
-        bottom: 45px;
-
-        left: -33px;
-
-    }
-
-
-    .hero-git {
-
-        top: 45px;
-
-        left: -33px;
-
-    }
-
-}
-
-
-
-
-/* =========================================
-   CONTAINER
-========================================= */
+/* =========================================================
+   SEÇÃO SOBRE
+========================================================= */
 
 .sobre-container {
 
@@ -711,15 +534,265 @@ body.dark .hero-tooltip p {
     gap: 100px;
 
 }
-#abajur{
-      width: 300px;
-      height: 350px;
+
+/* =========================================================
+   ABAJUR ANIMADO
+========================================================= */
+
+#abajur {
+    position: relative;
+    width: 300px;
+    height: 350px;
+    flex-shrink: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    cursor: pointer;
+}
+
+/* Área do abajur */
+
+.abajur .fio {
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transition: transform 0.3s ease;
+}
+
+/* Imagem do abajur */
+
+.abajur .fio img {
+    width: 260px;
+    height: 320px;
+
+    object-fit: contain;
+
+    position: relative;
+    z-index: 3;
+
+    transition:
+        transform 0.4s ease,
+        filter 0.4s ease;
+}
+
+/* =========================================================
+   BRILHO ATRÁS DO ABAJUR
+========================================================= */
+
+.abajur::before {
+    content: "";
+
+    position: absolute;
+
+    width: 190px;
+    height: 190px;
+
+    left: 50%;
+    top: 75px;
+
+    transform: translateX(-50%);
+
+    border-radius: 50%;
+
+    background: rgba(25, 11, 230, 0.15);
+
+    filter: blur(35px);
+
+    opacity: 0;
+
+    transition:
+        opacity 0.5s ease,
+        transform 0.5s ease;
+
+    z-index: 1;
+}
+body.dark-mode .abajur::before{
+    background: rgba(174, 10, 233, 0.15);
+}
+/* =========================================================
+   CONE DE LUZ
+========================================================= */
+
+.abajur::after {
+    content: "";
+
+    position: absolute;
+
+    width: 210px;
+    height: 190px;
+
+    left: 50%;
+    top: 135px;
+
+    transform: translateX(-50%);
+
+    background: linear-gradient(
+        to bottom,
+        rgba(8, 21, 121, 0.35),
+        rgba(2, 33, 208, 0.23),
+        transparent
+    );
+
+    clip-path: polygon(
+        25% 0,
+        75% 0,
+        100% 100%,
+        0 100%
+    );
+
+    filter: blur(5px);
+
+    opacity: 0;
+
+    transition:
+        opacity 0.5s ease,
+        transform 0.5s ease;
+
+    z-index: 2;
+
+    pointer-events: none;
+}
+body.dark-mode .abajur::after{
+      background: linear-gradient(
+        to bottom,
+        rgba(182, 54, 224, 0.35),
+        rgba(179, 53, 221, 0.23),
+        transparent
+    );
 }
 
 
-/* =========================================
-   ÁREA DA FOTO
-========================================= */
+/* =========================================================
+   ABAJUR ACESO
+========================================================= */
+
+.sobre-section.luz-acesa .abajur::before {
+    opacity: 1;
+
+    transform:
+        translateX(-50%)
+        scale(1.15);
+
+    animation: brilhoAbajur 2s ease-in-out infinite alternate;
+}
+
+.sobre-section.luz-acesa .abajur::after {
+    opacity: 1;
+
+    animation: luzAbajur 2s ease-in-out infinite alternate;
+}
+
+/* Imagem quando acesa */
+
+.sobre-section.luz-acesa .abajur .fio img {
+    filter:
+        brightness(1.15)
+        drop-shadow(0 0 10px rgba(16, 25, 203, 0.7))
+        drop-shadow(0 0 25px rgba(34, 50, 219, 0.5));
+}
+body.dark-mode .sobre-section.luz-acesa .abajur .fio img{
+      filter:
+        brightness(1.15)
+        drop-shadow(0 0 10px rgba(147, 16, 203, 0.7))
+        drop-shadow(0 0 25px rgba(176, 34, 219, 0.5));
+}
+
+/* =========================================================
+   ANIMAÇÃO DO BRILHO
+========================================================= */
+
+@keyframes brilhoAbajur {
+
+    0% {
+        opacity: 0.45;
+        transform:
+            translateX(-50%)
+            scale(0.95);
+    }
+
+    100% {
+        opacity: 0.9;
+        transform:
+            translateX(-50%)
+            scale(1.15);
+    }
+}
+
+/* =========================================================
+   ANIMAÇÃO DA LUZ
+========================================================= */
+
+@keyframes luzAbajur {
+
+    0% {
+        opacity: 0.35;
+        transform:
+            translateX(-50%)
+            scaleY(0.95);
+    }
+
+    100% {
+        opacity: 0.75;
+        transform:
+            translateX(-50%)
+            scaleY(1.05);
+    }
+}
+
+/* =========================================================
+   PUXAR O FIO
+========================================================= */
+
+.abajur .fio.puxando {
+    animation: puxarFio 0.25s ease;
+}
+
+@keyframes puxarFio {
+
+    0% {
+        transform: translateY(0);
+    }
+
+    30% {
+        transform: translateY(8px);
+    }
+
+    60% {
+        transform: translateY(-4px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+
+
+@media (hover: hover) {
+
+    .abajur:hover .fio img {
+        transform: scale(1.03);
+    }
+
+    .sobre-section.luz-acesa .abajur:hover::before {
+        opacity: 1;
+        transform:
+            translateX(-50%)
+            scale(1.25);
+    }
+
+}
+
+/* =========================================================
+   FOTO
+========================================================= */
 
 .sobre-foto-area {
 
@@ -736,10 +809,6 @@ body.dark .hero-tooltip p {
 }
 
 
-/* =========================================
-   FOTO
-========================================= */
-
 .foto-wrapper {
 
     position: relative;
@@ -755,16 +824,14 @@ body.dark .hero-tooltip p {
     border: 5px solid #0d6efd;
 
     box-shadow:
-        0 10px 40px rgba(13, 110, 253, .25);
+        0 10px 40px rgba(13, 110, 253, 0.25);
 
     cursor: pointer;
 
-    transition: .5s;
+    transition: 0.5s;
 
 }
 
-
-/* imagem */
 
 .foto-wrapper img {
 
@@ -774,21 +841,17 @@ body.dark .hero-tooltip p {
 
     object-fit: cover;
 
-    transition: .6s;
+    transition: 0.6s;
 
 }
 
-
-/* =========================================
-   HOVER DA FOTO
-========================================= */
 
 .foto-wrapper:hover {
 
     transform: scale(1.05);
 
     box-shadow:
-        0 0 50px rgba(13, 110, 253, .5);
+        0 0 50px rgba(13, 110, 253, 0.5);
 
 }
 
@@ -800,9 +863,9 @@ body.dark .hero-tooltip p {
 }
 
 
-/* =========================================
-   OVERLAY
-========================================= */
+/* =========================================================
+   OVERLAY FOTO
+========================================================= */
 
 .foto-overlay {
 
@@ -811,7 +874,7 @@ body.dark .hero-tooltip p {
     inset: 0;
 
     background:
-        rgba(13, 110, 253, .75);
+        rgba(13, 110, 253, 0.75);
 
     display: flex;
 
@@ -825,7 +888,7 @@ body.dark .hero-tooltip p {
 
     opacity: 0;
 
-    transition: .4s;
+    transition: 0.4s;
 
 }
 
@@ -850,24 +913,25 @@ body.dark .hero-tooltip p {
 
 }
 
-/* =========================================
-   TEXTO
-========================================= */
+
+/* =========================================================
+   TEXTO SOBRE
+========================================================= */
 
 .sobre-texto {
+
     margin-top: 80px;
+
     max-width: 1000px;
 
-    opacity: .4;
+    opacity: 0.4;
 
     transform: translateX(30px);
 
-    transition: .5s;
+    transition: 0.5s;
 
 }
 
-
-/* aparece quando passa na foto */
 
 .sobre-foto-area:hover + .sobre-texto {
 
@@ -886,7 +950,8 @@ body.dark .hero-tooltip p {
 
     border-radius: 20px;
 
-    background: rgba(13, 110, 253, .1);
+    background:
+        rgba(13, 110, 253, 0.1);
 
     color: #0d6efd;
 
@@ -924,9 +989,9 @@ body.dark .hero-tooltip p {
 }
 
 
-/* =========================================
-   TECNOLOGIAS
-========================================= */
+/* =========================================================
+   TECNOLOGIAS SOBRE
+========================================================= */
 
 .sobre-tecnologias {
 
@@ -951,7 +1016,7 @@ body.dark .hero-tooltip p {
 
     font-size: 13px;
 
-    transition: .3s;
+    transition: 0.3s;
 
 }
 
@@ -967,51 +1032,1233 @@ body.dark .hero-tooltip p {
 }
 
 
-/* =========================================
-   DARK MODE
-========================================= */
+/* =========================================================
+   ABAJUR / LUZ
+========================================================= */
 
-body.dark .sobre-texto p {
+.light-content {
 
-    color: #bbb;
+    opacity: 0;
+
+    visibility: hidden;
+
+    transform: translateY(12px);
+
+    transition:
+        opacity 0.5s ease,
+        visibility 0.5s ease,
+        transform 0.5s ease,
+        filter 0.5s ease;
+
+    filter: brightness(0.3);
 
 }
 
 
-body.dark .sobre-tecnologias span {
+.sobre-section.luz-acesa .light-content {
+
+    opacity: 1;
+
+    visibility: visible;
+
+    transform: translateY(0);
+
+    filter: brightness(1);
+
+}
+
+
+/* =========================================================
+   BOTÃO MODO CLARO / ESCURO
+========================================================= */
+
+#modeToggle {
+
+    padding: 8px 16px;
+
+    font-size: 14px;
+
+    border: 1px solid #ccc;
+
+    border-radius: 20px;
+
+    background: #f1f3f5;
+
+    color: #222;
+
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+
+    margin-left: 15px;
+
+}
+
+
+#modeToggle:hover {
+
+    background: black;
+
+    color: white;
+
+    transform: scale(1.05);
+
+}
+
+
+/* =========================================================
+   MODO ESCURO
+========================================================= */
+
+body.dark-mode {
+
+    background-color: #0d1117 !important;
+
+    color: #f5f5f5;
+
+}
+
+
+body.dark-mode p {
+
+    color: #d0d0d0;
+
+}
+
+
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode h4,
+body.dark-mode h5,
+body.dark-mode h6 {
+
+    color: #f5f5f5;
+
+}
+/*Trocar as cores azuis por roxa*/
+body.dark-mode{
+    --cor-roxa: #a855f7;
+    --cor-roxa-clara: #c084fc;
+    --cor-roxa-forte: #7e22ce;
+}
+body.dark-mode .meunome{
+    background: linear-gradient(
+        90deg,
+        #a855f7 0%,
+        #c084fc 50%,
+        #7e22ce 100%
+    );
+
+    background-size: 200%;
+  background-size: 200%;
+
+    -webkit-background-clip: text;
+  
+}
+body.dark-mode .btn{
+    color: white;
+}
+
+body.dark-mode .btn:hover{
+    background-color: purple;
+   
+}
+body.dark-mode .sobre-texto strong {
+    color: purple;
+}
+body.dark-mode .hero-skill{
+    border-color: purple;
+}
+body.dark-mode .foto-wrapper{
+    border-color: purple;
+    box-shadow:
+        0 0 50px rgba(200, 8, 168, 0.5);
+}
+body.dark-mode .foto-wrapper:hover{
+    border-color: purple;
+     box-shadow:
+        0 0 50px rgba(200, 8, 168, 0.5);
+
+    
+}
+
+
+/* =========================================================
+   NAVBAR DARK
+========================================================= */
+
+body.dark-mode .navbar {
+
+    background-color: #0d1117 !important;
+
+    transition:
+        background-color 0.4s ease;
+
+}
+
+
+body.dark-mode .navbar-brand,
+body.dark-mode .nav-link {
+
+    color: #f5f5f5 !important;
+
+}
+
+
+body.dark-mode .nav-link:hover {
+
+    color: purple !important;
+
+}
+
+
+/* =========================================================
+   BOTÃO DARK
+========================================================= */
+
+body.dark-mode #modeToggle {
 
     background: #161b22;
+
+    color: white;
+
+    border-color: #444;
+
+}
+
+
+body.dark-mode #modeToggle:hover {
+
+    background: #f1f3f5;
+
+    color: #111;
+
+}
+
+
+/* =========================================================
+   ÓRBITA DARK
+========================================================= */
+
+body.dark-mode .hero-skill {
+
+    background: #161b22;
+
+    border-color: purple;
+
+}
+
+
+body.dark-mode .hero-tooltip {
+
+    background: #161b22;
+
+    color: white;
+
+}
+
+
+body.dark-mode .hero-tooltip strong {
+
+    color: purple;
+
+}
+body.dark-mode .hero-orbit {
+    border: 1px dashed rgba(168, 85, 247, 0.35);
+}
+
+/* =========================================================
+   SOBRE DARK
+========================================================= */
+
+body.dark-mode .sobre-texto p {
+
+    color: #ccc;
+
+}
+
+
+body.dark-mode .sobre-tag {
+
+    background:
+        purple;
+
+    color: white;
+
+}
+
+body.dark-mode .sobre-tecnologias span {
+
+    background: purple;
 
     color: #ddd;
 
 }
 
 
-body.dark .sobre-tag {
+/* =========================================================
+   CARDS DARK
+========================================================= */
 
-    background: rgba(77, 171, 255, .1);
+body.dark-mode .card {
 
-    color: #4dabff;
+    background-color: #161b22;
+
+    color: white;
+
+    border-color: #30363d;
 
 }
 
 
-/* Conteúdo apagado no início */
-.light-content {
-  opacity: 0;
-  visibility: hidden;
-  transform: translateY(12px);
-  transition:
-    opacity 0.5s ease,
-    visibility 0.5s ease,
-    transform 0.5s ease,
-    filter 0.5s ease;
-  filter: brightness(0.3);
+body.dark-mode .card p {
+
+    color: #ccc;
+
 }
-/* Quando a luz acende */
-.sobre-section.luz-acesa .light-content {
-  opacity: 1;
-  visibility: visible;
-  transform: translateY(0);
-  filter: brightness(1);
+
+
+body.dark-mode .card h5 {
+
+    color: white;
+
+}
+
+
+/* =========================================================
+   CURRÍCULO DARK
+========================================================= */
+
+body.dark-mode #curriculo {
+
+    background-color: #0d1117 !important;
+
+}
+
+
+body.dark-mode #curriculo p {
+
+    color: #ccc;
+
+}
+
+
+/* =========================================================
+   FOOTER DARK
+========================================================= */
+
+body.dark-mode footer {
+
+    background-color: #0d1117;
+
+    border-color: #30363d !important;
+
+}
+
+
+body.dark-mode footer p {
+
+    color: #ccc;
+
+}
+
+
+body.dark-mode footer i {
+
+    color: white !important;
+
+}
+
+
+/* =========================================================
+   BOTÃO TOPO DARK
+========================================================= */
+
+body.dark-mode #btn-topo {
+
+    background-color: white;
+
+    color: #111;
+
+}
+
+
+/* =========================================================
+   RESPONSIVIDADE
+   TABLET / CELULAR
+========================================================= */
+
+@media (max-width: 900px) {
+
+    /* ---------- GERAL ---------- */
+
+    section {
+
+        padding: 80px 15px;
+
+    }
+
+
+    /* ---------- NAVBAR ---------- */
+
+    .navbar .container {
+
+        padding-left: 15px;
+
+        padding-right: 15px;
+
+    }
+
+
+    .navbar-brand .logo-img {
+
+        width: 55px;
+
+        height: 55px;
+
+    }
+
+
+    #modeToggle {
+
+        margin-left: 0;
+
+        margin-top: 10px;
+
+    }
+
+
+    /* ---------- HERO ---------- */
+
+    .hero-section {
+
+        min-height: auto;
+
+        padding: 70px 15px 50px;
+
+    }
+
+
+    .hero-content {
+
+        flex-direction: column;
+
+        gap: 50px;
+
+        text-align: center;
+
+        width: 100%;
+
+    }
+
+
+    .hero-text {
+
+        width: 100%;
+
+        text-align: center;
+
+    }
+
+
+    .hero-text h1 {
+
+        font-size:
+            clamp(32px, 9vw, 50px);
+
+        line-height: 1.1;
+
+    }
+
+
+    .hero-text .lead {
+
+        font-size: 20px !important;
+
+    }
+
+
+    .hero-buttons {
+
+        display: flex;
+
+        justify-content: center;
+
+        flex-wrap: wrap;
+
+        gap: 10px;
+
+    }
+
+
+    .hero-buttons .btn {
+
+        margin: 0 !important;
+
+    }
+
+
+    /* ---------- ÓRBITA ---------- */
+
+    .hero-skills {
+
+        width: min(90vw, 340px);
+
+        height: min(90vw, 340px);
+
+    }
+
+
+    .hero-orbit {
+
+        width: min(80vw, 300px);
+
+        height: min(80vw, 300px);
+
+    }
+
+
+    .hero-skill {
+
+        width: 58px;
+
+        height: 58px;
+
+    }
+
+
+    .hero-skill .logo-img {
+
+        width: 42px;
+
+        height: 42px;
+
+    }
+
+
+    /* ---------- POSIÇÕES ORBITA ---------- */
+
+    .hero-html {
+
+        top: -29px;
+
+        left: calc(50% - 29px);
+
+    }
+
+
+    .hero-css {
+
+        top: 42px;
+
+        right: -29px;
+
+    }
+
+
+    .hero-js {
+
+        bottom: 42px;
+
+        right: -29px;
+
+    }
+
+
+    .hero-java {
+
+        bottom: -29px;
+
+        left: calc(50% - 29px);
+
+    }
+
+
+    .hero-mysql {
+
+        bottom: 42px;
+
+        left: -29px;
+
+    }
+
+
+    .hero-git {
+
+        top: 42px;
+
+        left: -29px;
+
+    }
+
+
+    /* ---------- TOOLTIP ---------- */
+
+    .hero-tooltip {
+
+        width: 190px;
+
+    }
+
+
+    /* ---------- SOBRE ---------- */
+
+    .sobre-container {
+
+        flex-direction: column;
+
+        gap: 40px;
+
+        padding: 0 15px;
+
+        width: 100%;
+
+    }
+
+
+    #abajur {
+
+        width: 180px;
+
+        height: 220px;
+
+    }
+
+
+    .sobre-texto {
+
+        width: 100%;
+
+        max-width: 600px;
+
+        margin-top: 0;
+
+        text-align: center;
+
+    }
+
+
+    .sobre-texto h3 {
+
+        font-size: 26px;
+
+    }
+
+
+    .sobre-texto p {
+
+        font-size: 16px;
+
+    }
+
+
+    .sobre-tecnologias {
+
+        justify-content: center;
+
+    }
+
+
+    .sobre-foto-area {
+
+        width: 100%;
+
+    }
+
+
+    .foto-wrapper {
+
+        width: 220px;
+
+        height: 220px;
+
+    }
+
+
+    /* ---------- PROJETOS ---------- */
+
+    #github-projetos {
+
+        margin-left: 0;
+
+        margin-right: 0;
+
+        padding-left: 15px;
+
+        padding-right: 15px;
+
+    }
+
+
+    #github-projetos > h1 {
+
+        width: 100%;
+
+    }
+
+
+    /* ---------- CURRÍCULO ---------- */
+
+    #curriculo {
+
+        padding: 70px 15px;
+
+    }
+
+
+    /* ---------- FOOTER ---------- */
+
+    footer {
+
+        padding: 40px 15px;
+
+    }
+
+}
+
+
+/* =========================================================
+   CELULARES
+========================================================= */
+
+@media (max-width: 576px) {
+
+    section {
+
+        padding: 70px 15px;
+
+    }
+
+
+    /* ---------- NAVBAR ---------- */
+
+    .navbar {
+
+        padding: 5px 0;
+
+    }
+
+
+    .navbar-brand .logo-img {
+
+        width: 48px;
+
+        height: 48px;
+
+    }
+
+
+    /* ---------- HERO ---------- */
+
+    .hero-section {
+
+        padding: 50px 15px 30px;
+
+    }
+
+
+    .hero-content {
+
+        gap: 35px;
+
+    }
+
+
+    .hero-text h1 {
+
+        font-size: 34px;
+
+    }
+
+
+    .hero-text .lead {
+
+        font-size: 17px !important;
+
+    }
+
+
+    .hero-buttons {
+
+        flex-direction: column;
+
+        align-items: center;
+
+        width: 100%;
+
+    }
+
+
+    .hero-buttons .btn {
+
+        width: 180px;
+
+        margin: 0 !important;
+
+    }
+
+
+    /* ---------- CÍRCULO ---------- */
+
+    .hero-skills {
+
+        width: 280px;
+
+        height: 280px;
+
+    }
+
+
+    .hero-orbit {
+
+        width: 240px;
+
+        height: 240px;
+
+    }
+
+
+    .hero-skill {
+
+        width: 50px;
+
+        height: 50px;
+
+    }
+
+
+    .hero-skill .logo-img {
+
+        width: 35px;
+
+        height: 35px;
+
+    }
+
+
+    /* ---------- POSIÇÕES ---------- */
+
+    .hero-html {
+
+        top: -25px;
+
+        left: calc(50% - 25px);
+
+    }
+
+
+    .hero-css {
+
+        top: 35px;
+
+        right: -25px;
+
+    }
+
+
+    .hero-js {
+
+        bottom: 35px;
+
+        right: -25px;
+
+    }
+
+
+    .hero-java {
+
+        bottom: -25px;
+
+        left: calc(50% - 25px);
+
+    }
+
+
+    .hero-mysql {
+
+        bottom: 35px;
+
+        left: -25px;
+
+    }
+
+
+    .hero-git {
+
+        top: 35px;
+
+        left: -25px;
+
+    }
+
+
+    /* ---------- TOOLTIP ---------- */
+
+    .hero-tooltip {
+
+        width: 170px;
+
+        padding: 12px;
+
+    }
+
+
+    .hero-tooltip strong {
+
+        font-size: 15px;
+
+    }
+
+
+    .hero-tooltip p {
+
+        font-size: 11px;
+
+    }
+
+
+    /* ---------- SOBRE ---------- */
+
+    .sobre-container {
+
+        gap: 30px;
+
+    }
+
+
+
+    .sobre-texto h3 {
+
+        font-size: 23px;
+
+    }
+
+
+    .sobre-texto p {
+
+        font-size: 15px;
+
+        line-height: 1.6;
+
+    }
+
+
+    .foto-wrapper {
+
+        width: 190px;
+
+        height: 190px;
+
+    }
+
+
+    /* ---------- TECNOLOGIAS ---------- */
+
+    .sobre-tecnologias {
+
+        gap: 8px;
+
+    }
+
+
+    .sobre-tecnologias span {
+
+        padding: 7px 11px;
+
+        font-size: 12px;
+
+    }
+
+
+    /* ---------- PROJETOS ---------- */
+
+    #github-projetos {
+
+        padding-left: 15px;
+
+        padding-right: 15px;
+
+    }
+
+
+    #github-projetos .card {
+
+        width: 100%;
+
+    }
+
+
+    /* ---------- BOTÃO TOPO ---------- */
+
+    #btn-topo {
+
+        right: 15px;
+
+        bottom: 15px;
+
+    }
+
+}
+
+
+/* =========================================================
+   CELULARES MUITO PEQUENOS
+========================================================= */
+
+@media (max-width: 380px) {
+
+    .hero-text h1 {
+
+        font-size: 29px;
+
+    }
+
+
+    .hero-text .lead {
+
+        font-size: 16px !important;
+
+    }
+
+
+    .hero-skills {
+
+        width: 250px;
+
+        height: 250px;
+
+    }
+
+
+    .hero-orbit {
+
+        width: 215px;
+
+        height: 215px;
+
+    }
+
+
+    .hero-skill {
+
+        width: 45px;
+
+        height: 45px;
+
+    }
+
+
+    .hero-skill .logo-img {
+
+        width: 30px;
+
+        height: 30px;
+
+    }
+
+
+    .hero-html {
+
+        top: -22px;
+
+        left: calc(50% - 22px);
+
+    }
+
+
+    .hero-css {
+
+        top: 32px;
+
+        right: -22px;
+
+    }
+
+
+    .hero-js {
+
+        bottom: 32px;
+
+        right: -22px;
+
+    }
+
+
+    .hero-java {
+
+        bottom: -22px;
+
+        left: calc(50% - 22px);
+
+    }
+
+
+    .hero-mysql {
+
+        bottom: 32px;
+
+        left: -22px;
+
+    }
+
+
+    .hero-git {
+
+        top: 32px;
+
+        left: -22px;
+
+    }
+
+
+    .foto-wrapper {
+
+        width: 170px;
+
+        height: 170px;
+
+    }
+
+
+}
+
+
+@media (hover: none) and (pointer: coarse) {
+
+    .card:hover {
+
+        transform: none;
+
+    }
+
+    .foto-wrapper:hover {
+
+        transform: none;
+
+    }
+
+    .foto-wrapper:hover img {
+
+        transform: none;
+
+    }
+
+    .hero-skill:hover {
+
+        transform: none;
+
+    }
+
+}
+
+/* =========================================================
+   NAVBAR FIXA
+========================================================= */
+
+#navbar {
+    position: fixed !important;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+
+    z-index: 9999 !important;
+
+    /* Fundo totalmente sólido */
+    background-color: #f8f9fa !important;
+
+    /* Impede transparência */
+    opacity: 1 !important;
+
+    /* Evita qualquer conteúdo aparecendo atrás */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+
+    transition:
+        background-color 0.4s ease,
+        box-shadow 0.4s ease;
+}
+
+
+/* Links da navbar */
+
+#navbar .nav-link {
+    color: #333 !important;
+}
+
+
+#navbar .nav-link:hover {
+    color: #0d6efd !important;
+}
+
+
+/* Logo */
+
+#navbar .logo-img {
+    width: 70px;
+    height: 70px;
+    object-fit: contain;
+}
+
+
+/* =========================================================
+   NAVBAR - MODO ESCURO
+========================================================= */
+
+body.dark-mode #navbar {
+
+    background-color: #0d1117 !important;
+
+    box-shadow:
+        0 2px 10px white(0, 0, 0, 0.4);
+
+}
+
+
+body.dark-mode #navbar .nav-link {
+
+    color: #f5f5f5 !important;
+
+}
+
+
+body.dark-mode #navbar .nav-link:hover {
+
+    color: #4dabff !important;
+
+}
+
+
+/* =========================================================
+   NAVBAR - CELULAR
+========================================================= */
+
+@media (max-width: 900px) {
+
+    #navbar {
+
+        padding: 5px 0;
+
+    }
+
+    #navbar .logo-img {
+
+        width: 55px;
+        height: 55px;
+
+    }
+
+}
+
+
+@media (max-width: 576px) {
+
+    #navbar .logo-img {
+
+        width: 48px;
+        height: 48px;
+
+    }
+
 }

@@ -15,16 +15,16 @@
 
   <!-- Estilos personalizados -->
   <link rel="stylesheet" href="style.css" />
-  <link rel="icon" href="img/logo-removebg-preview.png "/>
+  <link rel="icon" href="img/logo.nome-removebg-preview.png "/>
 
 </head>
 
-<body class="bg-light">
+<body >
 
   <!-- Navbar fixa -->
-  <nav class="navbar navbar-expand-md fixed-top bg-light shadow-sm">
+  <nav class="navbar navbar-expand-md fixed-top shadow-sm" id="navbar">
     <div class="container">
-      <a class="navbar-brand" href="#"><img class="logo-img" src="img/logo-removebg-preview.png" alt="Logo Ryan" /></a>
+      <a class="navbar-brand" href="#"><img class="logo-img" id="logoPrincipal" src="img/teste2-removebg-preview.png" alt="Logo Ryan" /></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -34,6 +34,7 @@
           <li class="nav-item"><a class="nav-link" href="#sobre">Sobre</a></li>
           <li class="nav-item"><a class="nav-link" href="#github-projetos">Projetos</a></li>
            <li class="nav-item"><a class="nav-link" href="#curriculo">Currículo</a></li>
+           <button class="modeToggle" id="modeToggle">trocar modo</button>
         </ul>
       </div>
     </div>
@@ -224,7 +225,7 @@
     <h2 class="text-center mb-5">Sobre Mim</h2>
     <div class="sobre-container">
       <div class="abajur" id="abajur">
-          <div class="fio" title="Puxe o fio">
+          <div class="fio" title="Aperte ">
              <img src="img/floor-lamp.png">
           </div>
         </div>
@@ -268,7 +269,7 @@
 </section>
 
   <!-- Projetos -->
-
+  
   <div id="github-projetos" class="row g-4"> <h1  class="text-center">Projetos</h1></div>
 
   <!-- Currículo -->
@@ -423,7 +424,41 @@ if (secaoSobre && fio) {
     secaoSobre.classList.toggle('luz-acesa');
   });
 }
+const body = document.body;
+const modeToggle = document.getElementById("modeToggle");
 
+// Recupera preferência salva
+const modoSalvo = localStorage.getItem("mode");
+
+if (modoSalvo === "dark") {
+    body.classList.add("dark-mode");
+    modeToggle.innerHTML = "☀️ Modo claro";
+} else {
+    body.classList.remove("dark-mode");
+    modeToggle.innerHTML = "🌙 Modo escuro";
+}
+
+
+// Botão
+modeToggle.addEventListener("click", function () {
+
+    const estaEscuro = body.classList.toggle("dark-mode");
+
+    if (estaEscuro) {
+
+        localStorage.setItem("mode", "dark");
+
+        modeToggle.innerHTML = "☀️ Modo claro";
+
+    } else {
+
+        localStorage.setItem("mode", "light");
+
+        modeToggle.innerHTML = "🌙 Modo escuro";
+
+    }
+
+});
 
   </script>
 </body>

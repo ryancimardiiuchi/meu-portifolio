@@ -34,5 +34,12 @@ document.addEventListener("DOMContentLoaded", () => {
   elementos.forEach(el => observador.observe(el));
 });
 
+const logoPrincipal = document.getElementById("logoPrincipal");
 
-
+function atualizarLogo() {
+    if (document.body.classList.contains("dark-mode")) {
+        logoPrincipal.src = "img/logo-escura.png";
+    } else {
+        logoPrincipal.src = "img/logo-clara.png";
+    }
+}
