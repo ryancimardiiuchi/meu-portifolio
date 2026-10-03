@@ -272,4 +272,3 @@ Nem tudo aqui está pronto — e essa é justamente a ideia.
 
 <img src="https://capsule-render.vercel.app/api?type=waving&color=0:2563eb,50:1e3a5f,100:111827&height=100&section=footer"/>
 
-</div> a img esta muito grande quero que ela fique ao lado de bacharelado em ciencias da computação n que consuma uma area toda
