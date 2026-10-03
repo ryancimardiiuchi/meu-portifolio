@@ -13,23 +13,23 @@ Ryan Cimardi Iuchi
 ├── 🎓 Ciência da Computação
 ├── 💻 Desenvolvedor Backend
 ├── ☕ Café + código
-├── 🧠 Sempre aprendendo alguma coisa nova
+├── 🧠 Sempre aprendendo
 └── 🚀 Construindo projetos na prática
 ```
 
-Sou estudante de **Ciência da Computação** e desenvolvedor em formação, atualmente focado principalmente em **desenvolvimento Back-end e aplicações web**.
+Sou estudante de **Ciência da Computação** e desenvolvedor em formação, focado principalmente em **Back-end e aplicações web**.
 
-Gosto de entender como as coisas funcionam por trás da interface: APIs, autenticação, banco de dados, segurança e integração entre sistemas.
+Gosto de entender como as coisas funcionam por trás da interface: **APIs, autenticação, bancos de dados, segurança e integração entre sistemas**.
 
-Atualmente estou desenvolvendo projetos próprios para transformar o que estudo em aplicações reais.
+---
 
-### 🎓 Formação
+## `🎓 formação`
 
 <table>
   <tr>
     <td>
       <a href="https://www.cedupsc.com.br/">
-       <img width="80"alt="Firefly_Gemini_Flash_Retro_8-bit_or_16-bit_pixel_art _Limited_palette_of_up_to_30_bold_colors_with_clearly_943858-removebg-preview" src="https://github.com/user-attachments/assets/35a9523e-869e-4db2-9dde-cfa46846ff3b" />
+        <img width="80" alt="CEDUP Renato Ramos da Silva" src="https://github.com/user-attachments/assets/35a9523e-869e-4db2-9dde-cfa46846ff3b" />
       </a>
     </td>
     <td>
@@ -39,17 +39,16 @@ Atualmente estou desenvolvendo projetos próprios para transformar o que estudo 
   </tr>
 </table>
 
-
 <table>
   <tr>
     <td>
-      <a href="https://https://www.ifsc.edu.br/">
-       <img width="80" alt="Logotipo_Pixelado_Instituto_Federal-removebg-preview" src="https://github.com/user-attachments/assets/fd0a7951-82ea-4df2-9510-5c0c73b865c9" />
+      <a href="https://www.ifsc.edu.br/">
+        <img width="80" alt="IFSC" src="https://github.com/user-attachments/assets/fd0a7951-82ea-4df2-9510-5c0c73b865c9" />
       </a>
     </td>
     <td>
       <strong>Bacharelado em Ciência da Computação — IFSC</strong><br>
-      2025 — EM ANDAMENTO
+      2025 — Em andamento
     </td>
   </tr>
 </table>
@@ -86,7 +85,7 @@ Atualmente estou desenvolvendo projetos próprios para transformar o que estudo 
 
 **Sistema de lavanderia online**
 
-Projeto full-stack desenvolvido para gerenciamento de serviços de lavanderia, usuários e pedidos.
+Projeto full-stack desenvolvido para gerenciamento de usuários, serviços e pedidos.
 
 ```text
 React
@@ -100,27 +99,22 @@ Prisma
 MongoDB
 ```
 
-**Principais funcionalidades:**
+**Funcionalidades:**
 
 - 🔐 Cadastro e login
 - 🔑 Recuperação de senha
 - ✉️ Verificação de e-mail
 - 🛡️ Autenticação com JWT
 - 🛒 Carrinho e pedidos
-- 🧺 Gerenciamento de serviços
 - 👤 Área administrativa
-- 📦 Sistema de pedidos
-- 🔌 Comunicação entre Front-end e Back-end
 
 > 🚧 Projeto em desenvolvimento.
 
 ---
 
-### 🤖 Robô com Inteligência Artificial para Cuidados com Idosos
+### 🤖 HYUNCARE
 
 Projeto acadêmico envolvendo **robótica, inteligência artificial e desenvolvimento de software**, com integração a uma aplicação para auxiliar no acompanhamento e cuidado de idosos.
-
-> Projeto desenvolvido para a feira de ciências **HYUNCARE**.
 
 <div align="center">
 
@@ -132,52 +126,7 @@ Projeto acadêmico envolvendo **robótica, inteligência artificial e desenvolvi
 
 ---
 
-## `📚 currently_learning`
-
-```text
-[████████████████░░░░] Backend
-
-[██████████████░░░░░░] APIs REST
-
-[████████████░░░░░░░░] Banco de Dados
-
-[███████████░░░░░░░░░] Segurança
-
-[█████████░░░░░░░░░░░] Arquitetura
-```
-
-Atualmente estou aprofundando meus conhecimentos em:
-
-- Node.js
-- Express
-- APIs REST
-- Prisma
-- MongoDB
-- Autenticação e autorização
-- JWT
-- Segurança de aplicações
-- React
-- Arquitetura de aplicações web
-
----
-
-## `🚧 em construção`
-
-Nem tudo aqui está pronto — e essa é justamente a ideia.
-
-### Próximos passos
-
-- [ ] Evoluir o Lavô+
-- [ ] Melhorar arquitetura do Back-end
-- [ ] Aprimorar segurança da API
-- [ ] Criar novos projetos Full Stack
-- [ ] Aprender novas tecnologias
-- [ ] Fazer deploy dos projetos
-- [ ] Contribuir com projetos Open Source
-
----
-
-## `🐍 contribution_snake`
+## `🐍 contributions`
 
 <div align="center">
 
@@ -198,16 +147,6 @@ Nem tudo aqui está pronto — e essa é justamente a ideia.
 <img height="180em" src="https://github-readme-stats.vercel.app/api?username=ryancimardiiuchi&show_icons=true&theme=tokyonight&include_all_commits=true&count_private=true"/>
 
 <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=ryancimardiiuchi&layout=compact&langs_count=8&theme=tokyonight"/>
-
-</div>
-
----
-
-## `🔥 streak`
-
-<div align="center">
-
-<img src="https://streak-stats.demolab.com?user=ryancimardiiuchi&theme=tokyonight&hide_border=true" />
 
 </div>
 
@@ -253,22 +192,6 @@ Nem tudo aqui está pronto — e essa é justamente a ideia.
 
 <div align="center">
 
-```text
-╔══════════════════════════════════════╗
-║                                      ║
-║       "transformando café em        ║
-║             código..."              ║
-║                                      ║
-╚══════════════════════════════════════╝
-```
-
-### `while(alive) { learn(); build(); repeat(); }`
-
-</div>
-
-<br>
-
-<div align="center">
-
 <img src="https://capsule-render.vercel.app/api?type=waving&color=0:2563eb,50:1e3a5f,100:111827&height=100&section=footer"/>
 
+</div>
